@@ -1,0 +1,25 @@
+.management_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+    padding: 0 3%;
+    height: 100%;
+    margin: 0 5%;
+}
+
+.management_button_a {
+    padding: 7% 9%;
+    border-radius: 5px;
+    border: 2px solid #198754;
+    color: #198754;
+    font-size: larger;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+        transform: scale(101%);
+        color: white;
+        border: 2px solid white;
+    }
+}

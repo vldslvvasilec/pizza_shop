@@ -1,0 +1,39 @@
+.hearer_loging {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logining {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Пространство между полями */
+    margin-top: 10%;
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5%;
+        label {
+            margin-bottom: 5px; /* Отступ между меткой и полем ввода */
+            width: 50%;
+        }
+        input {
+            padding: 8px; /* Внутренний отступ */
+            border-radius: 4px; /* Радиус границ поля ввода */
+            border: 1px solid #ccc; /* Граница поля ввода */
+            box-sizing: border-box; /* Учитывать границу в расчетах размера элемента */
+        }
+    }
+    button {
+        font-size: 2em;
+        background-color: #198754;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 5px;
+        transition: 0.5s;
+        &:hover {
+            transform: scale(103%);
+        }
+    }
+}

@@ -1,0 +1,9 @@
+    <section class="hearer_loging">
+    <h2>Přihlášení</h2>
+    <span class="close_button" onclick="close_modal()">X</span>
+    </section>
+    <form id="loginForm" class="logining" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Přihlásit se</button>
+    </form>

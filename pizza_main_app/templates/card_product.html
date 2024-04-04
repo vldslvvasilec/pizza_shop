@@ -1,0 +1,36 @@
+
+{% block card_content %}
+{% for products in combined_result %}
+<div class="card-group d-flex">
+    {% for product in products %}<div class="card-item"><img
+src="../../media/{{product.image_product}}/"
+class="card-img-top"
+alt="{{product.title}}" />
+<div class="card-body">
+<h5 class="card-title">{{product.title}}</h5>
+<p class="card-text">{{product.ingredients|truncatechars_html:90}}</p>
+<section class="cardFooter">
+    <p class="price">
+        <span class="priceContent">{{product.price}}</span
+        ><span class="priceCurr">Kč</span>
+    </p>
+    <p class="number number{{product.title}}">
+        <span class="number_button number_minus" data-product-title="{{ product.title }}">-</span>
+        <span class="number_number number_number" data-product-title="{{ product.title }}">0</span>
+        <span class="number_button number_plus" data-product-title="{{ product.title }}">+</span>
+    </p>
+</section>
+<section class="cardFooter">
+<a class="typeProduct" href="/{{product.class_name}}">{{product.class_name}}</a>
+<button
+type="button"
+class="card-btn btn btn-primary"
+data-product-title="{{ product.title }}">
+Objednat
+</button>
+</section>
+</div></div>
+    {% endfor %}
+</div>
+{% endfor %}
+{% endblock card_content %}

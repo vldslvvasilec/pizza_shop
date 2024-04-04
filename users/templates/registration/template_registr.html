@@ -1,0 +1,17 @@
+    <section class="registration-wrap">
+        <section class="hearer_registration">
+            <h2>Registrace</h2>
+        </section>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="error-regist-message">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form class="registration" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Zaregistrirovat se</button>
+        </form>
+</section>

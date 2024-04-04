@@ -1,0 +1,95 @@
+@import "./components/registration";
+@import "./components/loging";
+
+.loging_wrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    z-index: 98;
+    display: none;
+}
+
+.registerModal {
+    padding: 2%;
+    border-radius: 5px;
+    border: 2px solid #198754;
+    color: #198754;
+    position: fixed;
+    top: 10vh;
+    z-index: 99;
+    background-color: #fff;
+    opacity: 1;
+    display: none;
+}
+
+.close_button {
+    width: 10%;
+    height: 5%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    color: #fff;
+    background-color: red;
+    border-radius: 5px;
+}
+
+// .hearer_loging {
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+// .logining {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 10px; /* Пространство между полями */
+//     margin-top: 10%;
+//     p {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         gap: 5%;
+//         label {
+//             margin-bottom: 5px; /* Отступ между меткой и полем ввода */
+//             width: 50%;
+//         }
+//         input {
+//             padding: 8px; /* Внутренний отступ */
+//             border-radius: 4px; /* Радиус границ поля ввода */
+//             border: 1px solid #ccc; /* Граница поля ввода */
+//             box-sizing: border-box; /* Учитывать границу в расчетах размера элемента */
+//         }
+//     }
+//     button {
+//         font-size: 2em;
+//         background-color: #198754;
+//         color: #fff;
+//         border: none;
+//         border-radius: 6px;
+//         padding: 5px;
+//         transition: 0.5s;
+//         &:hover {
+//             transform: scale(103%);
+//         }
+//     }
+// }
+
+
+
+@media screen and (max-width: 670px) {
+    .registration {
+        width: 90%;
+        label {
+            width: 38%;
+        }
+        imput {
+            width: 45%;
+        }
+    }
+}
+

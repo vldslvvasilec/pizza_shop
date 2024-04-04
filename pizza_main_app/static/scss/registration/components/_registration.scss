@@ -1,0 +1,90 @@
+.registration-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hearer_registration {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    color: #198754;
+}
+
+.registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Пространство между полями */
+    margin-bottom: 2%;
+    width: 60%;
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        justify-content: center;
+        gap: 4%;
+        width: 100%;
+        label {
+            margin-bottom: 5px; /* Отступ между меткой и полем ввода */
+            text-align: right;
+            width: 28%;
+        }
+        input {
+            width: 33%;
+            padding: 8px; /* Внутренний отступ */
+            border-radius: 4px; /* Радиус границ поля ввода */
+            border: 1px solid #ccc; /* Граница поля ввода */
+            box-sizing: border-box; /* Учитывать границу в расчетах размера элемента */
+        }
+    }
+    button {
+        width: 100%;
+        font-size: 2em;
+        background-color: #198754;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 5px;
+        transition: 0.5s;
+        &:hover {
+            transform: scale(103%);
+        }
+    }
+}
+
+.error-regist-message {
+    color: red;
+}
+
+.registration-wrap {
+    .messages {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li.error-regist-message {
+            color: red;
+        }
+    }
+}
+
+.registration {
+    p {
+        input[aria-invalid="true"] {
+            border: 2px solid red;
+        }
+    }
+    ul.errorlist {
+        li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: red;
+            font-size: large;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{global_title}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.min.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="manage_title">
+            <a class="navbar-brand manage_home_page" href="{% url 'all_menu' %}">
+            <img
+                src="{% static 'images/Pizza-logo.png' %}"
+                alt="Logo"
+                width="70"
+            />
+            <span class="manage_title">Pizza Shop</span>
+            <img
+                src="{% static 'images/Pizza-logo.png' %}"
+                alt="Logo"
+                width="70"
+            />
+            </a>
+        </div>
+        <div class="navbar navbar_wrap">
+        <span class="manager_closing_menu"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h520v80H120Zm664-40L584-480l200-200 56 56-144 144 144 144-56 56ZM120-440v-80h400v80H120Zm0-200v-80h520v80H120Z"/></svg></span>
+        <ul class="nav flex-column manage_nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page">Produkce</a>
+                <ul class="manager_product_list">
+                    {% for drop_item in drop_items %}
+                    <li>
+                        <a class="dropdown-item" href="/{{drop_item}}_manage">{{drop_item}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Zákazníci</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Kuchaři</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Manažeři</a>
+            </li>
+            </ul>
+        </div>
+    </header>
+    <main class="main">{% lorem 1 b random %}
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

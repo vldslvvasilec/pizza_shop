@@ -1,0 +1,47 @@
+.container-fluid{position: relative;z-index: 1;}
+
+.nav-item {
+    color: #198754;
+    font-size: 1.5em;
+}
+
+.nav-link {
+    margin: 0;
+    padding: 0;
+    color: #198754;
+    font-weight: 500;
+    letter-spacing: 2%;
+    transition: 0.3s;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.navbar-nav .nav-link,
+.navbar-nav {
+    --bs-nav-link-hover-color: #198754;
+    color: #198754;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.dropdown-item {
+    transition: 0.5s;
+
+    &:hover {
+        color: white;
+        background-color: #ffc107;
+    }
+}
+
+.btn-header {
+    padding: 1% 4%;
+    letter-spacing: 3%;
+    font-weight: 400;
+    transition: 0.3s;
+}
