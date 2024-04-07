@@ -19,32 +19,32 @@
 }
 
 .navbar_wrap {
-    height: 100vh;
-    width: 100px;
-    background-color: #ffc107;
+    width: 3vw;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    position: relative;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    position: relative;
     box-sizing: border-box;
 }
 
 .manager_closing_menu {
-    max-width: 10%;
-    background-color: #ffc107;
     height: 100vh;
+    width: 100%;
+    background-color: #ffc107;
     display: flex;
     justify-content: center;
-    position: fixed;
+    position: sticky;
     left: 0;
     align-items: center;
     border: none;
     margin: 0;
     padding: 0 1%;
     box-sizing: border-box;
+    cursor: pointer;
     svg {
         fill: #198754;
     }
@@ -56,21 +56,71 @@
 }
 
 .manage_nav {
-    max-width: 70%;
+    width: 10vw;
+    background-color: #ffc107;
     height: 100%;
     display: flex;
     flex-direction: column;
-    // position: fixed;
-    // list-style: none;
+    position: absolute;
+    list-style: none;
     padding: 1%;
     display: none;
-    li {
-        list-style: none;
-        a {
-            color: #198754;
-        }
-        &:hover {
+    margin-left: 2vw;
+    padding: 2vw;
+    padding-left: 2.5vw;
+    box-sizing: border-box;
+}
+
+.nav-item-manage {
+    list-style: none;
+    margin-bottom: 10%;
+    cursor: pointer;
+    a {
+        color: #198754;
+        text-decoration: none;
+        font-size: larger;
+        font-weight: 500;
+    }
+
+    &:hover {
+        .nav-link-manage {
             color: white;
         }
     }
+}
+
+.manager_product_list {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.drop_product_list {
+    list-style: none;
+    margin: 10% 0;
+    padding-left: 10%;
+    font-weight: 400;
+    a {
+        color: #198754;
+        text-decoration: none;
+        font-size: large;
+    }
+
+    &:hover {
+        .dropdown-item-manage {
+            color: white;
+        }
+    }
+}
+
+
+.main-manage {
+    width: 97vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 3vw;
+}
+
+.container_main_manage {
+    display: flex;
 }

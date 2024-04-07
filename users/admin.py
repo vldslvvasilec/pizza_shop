@@ -1,10 +1,11 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import CustomUser, Manager
+from .models import CustomUser
 
 class CustomUserAndManagerAdmin(UserAdmin):
-    list_display = ('username', 'email', 'first_name', 'last_name', 'is_staff', 'is_superuser', 'manager_first_name', 'manager_last_name')
-    search_fields = ('username', 'email', 'first_name', 'last_name', 'manager__first_name', 'manager__last_name')
+    list_display = ('username', 'email', 'first_name', 'last_name', 'user_type')
+    list_filter = ('user_type',)  # Добавьте запятую, чтобы указать кортеж
+    search_fields = ('username', 'email', 'first_name', 'last_name')
 
     def manager_first_name(self, obj):
         return obj.manager.first_name if obj.manager else ''
@@ -13,4 +14,3 @@ class CustomUserAndManagerAdmin(UserAdmin):
         return obj.manager.last_name if obj.manager else ''
 
 admin.site.register(CustomUser, CustomUserAndManagerAdmin)
-admin.site.register(Manager)

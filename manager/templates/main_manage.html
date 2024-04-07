@@ -1,0 +1,13 @@
+{% comment %} {% if user.is_authenticated  and user.user_type == 'manager'%}
+{% include "base_manager.html" %}
+{% block manage_content %}
+    {{main_content}}
+{% endblock manage_content %}
+{% else %}
+{% include "loging_manage.html" %}
+{% endif %} {% endcomment %}
+
+{% include "base_manager.html" %}
+{% block manage_content %}
+    {{main_content}}
+{% endblock manage_content %}

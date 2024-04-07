@@ -1,7 +1,5 @@
-from django.contrib.messages.views import SuccessMessageMixin
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.urls import reverse_lazy, reverse
-from django.views.generic import CreateView, FormView, TemplateView
+from django.views.generic import FormView, TemplateView
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate
 from .forms import CustomUserCreationForm

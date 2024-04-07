@@ -7,7 +7,7 @@ class CustomUserCreationForm(forms.ModelForm):
 
     class Meta:
         model = CustomUser
-        fields = ['username', 'first_name', 'last_name', 'password1', 'password2']
+        fields = ['username', 'first_name', 'last_name', 'password1', 'password2', 'user_type']
         labels = {
             'username': 'Uživatelské jméno',
             'first_name': 'Jméno',
@@ -21,6 +21,8 @@ class CustomUserCreationForm(forms.ModelForm):
             'password2': None,
         }
         label_suffix = ":"
+
+    user_type = forms.CharField(widget=forms.HiddenInput(), initial='buyer')
 
     def clean_username(self):
         username = self.cleaned_data['username']

@@ -23,7 +23,7 @@
         
         <header>
             <div class="loging_header">
-                {% if user.is_authenticated %}
+                {% if user.is_authenticated  and user.user_type == 'buyer'%}
                     <section class="loging_active">
                         <p class="header_title">
                             <span class="header_title_static">Vítejte, </span>
@@ -116,11 +116,11 @@
         <footer class="Footer">
             <div class="footer-wrap">
                 <section class="management_button manager_button">
-                    <a class="management_button_a manager_a">Manažer</a>
+                    <a class="management_button_a manager_a" href="{% url 'manager:manager_main' %}">Manažer</a>
                 </section>
                 <span class="footer-phone">+420705923491</span>
                 <section class="management_button cook_button">
-                    <a class="management_button_a cook_a">Kuchař</a>
+                    <a class="management_button_a cook_a" href="{% url 'manager:manager_main' %}">Kuchař</a>
                 </section>
             </div>
         </footer>
